@@ -1,0 +1,6 @@
+<p>{{ count.multipliedCount | async }}</p>
+<button>Update</button>
+<p>No of films : {{starWars.filmCount | async}}</p>
+<ul>
+  <li *ngFor="let film of filmNames">{{ film }}</li>
+</ul>
