@@ -25,6 +25,10 @@ export class AppComponent implements AfterViewInit {
     console.log(this.inputs);
   }
 
+  handleClick() {
+    console.log('Clicked Outside');
+  }
+
   makeFocus() {
     this.inputs.forEach((inputEl, i) => {
       inputEl.nativeElement.value = `${i + 1}`;
