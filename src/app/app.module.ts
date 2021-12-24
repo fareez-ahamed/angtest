@@ -5,10 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
+import { DatePickerComponent } from './date-picker/date-picker.component';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [AppComponent, DisplayComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [AppComponent, DisplayComponent, DatePickerComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ComponentsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

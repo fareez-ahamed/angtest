@@ -44,7 +44,7 @@ export class StarWarsService {
 
   fetchFilmList() {
     this.http
-      .get<FilmsResponse>('https://swapi.dev/api/films')
+      .get<FilmsResponse>('https://swapi.py4e.com/api/films')
       .subscribe((data) => {
         this.films.next(data.results);
         console.log('Response came');
