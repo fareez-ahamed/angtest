@@ -5,6 +5,7 @@ import {
   OnInit,
   Output,
   EventEmitter,
+  Input,
 } from '@angular/core';
 
 @Directive({
@@ -14,20 +15,23 @@ export class ClickOutsideDirective implements OnInit, OnDestroy {
   @Output('click-outside')
   clickOutside = new EventEmitter();
 
+  @Input('parent') parent: Node = document;
+
   listener!: (e: Event) => void;
 
   constructor(private elRef: ElementRef<HTMLElement>) {}
 
   ngOnDestroy(): void {
-    document.removeEventListener('click', this.listener);
+    this.parent.removeEventListener('click', this.listener);
   }
 
   ngOnInit(): void {
+    console.log('Parent', this.parent);
     this.listener = (event) => {
       if (!this.elRef.nativeElement.contains(event.target as Node)) {
         this.clickOutside.emit();
       }
     };
-    document.addEventListener('click', this.listener);
+    this.parent.addEventListener('click', this.listener);
   }
 }

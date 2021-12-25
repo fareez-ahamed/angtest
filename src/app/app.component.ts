@@ -16,6 +16,8 @@ import { DisplayComponent } from './display/display.component';
 export class AppComponent implements AfterViewInit {
   title = 'angtest';
 
+  showDialog = false;
+
   currDate = new Date();
 
   @ViewChildren('inputRef')
@@ -27,6 +29,10 @@ export class AppComponent implements AfterViewInit {
 
   handleClick() {
     console.log('Clicked Outside');
+  }
+
+  hideDialog() {
+    this.showDialog = false;
   }
 
   makeFocus() {
