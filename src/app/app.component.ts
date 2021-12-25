@@ -3,10 +3,8 @@ import {
   Component,
   ElementRef,
   QueryList,
-  ViewChild,
   ViewChildren,
 } from '@angular/core';
-import { DisplayComponent } from './display/display.component';
 
 @Component({
   selector: 'app-root',
@@ -23,13 +21,9 @@ export class AppComponent implements AfterViewInit {
   @ViewChildren('inputRef')
   inputs!: QueryList<ElementRef<HTMLInputElement>>;
 
-  ngAfterViewInit(): void {
-    console.log(this.inputs);
-  }
+  ngAfterViewInit(): void {}
 
-  handleClick() {
-    console.log('Clicked Outside');
-  }
+  handleClick() {}
 
   hideDialog() {
     this.showDialog = false;
