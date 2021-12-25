@@ -14,6 +14,8 @@ import {
 export class AppComponent implements AfterViewInit {
   title = 'angtest';
 
+  val = 20;
+
   showDialog = false;
 
   currDate = new Date();

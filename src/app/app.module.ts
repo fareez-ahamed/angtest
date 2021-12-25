@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 import { DisplayComponent } from './display/display.component';
 import { DatePickerComponent } from './date-picker/date-picker.component';
 import { ComponentsModule } from './components/components.module';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
 @NgModule({
-  declarations: [AppComponent, DisplayComponent, DatePickerComponent],
+  declarations: [AppComponent, DisplayComponent, DatePickerComponent, TwoWayBindingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
