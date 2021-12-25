@@ -1,6 +1,13 @@
 <!-- <div class="bg-blue-700 text-white">Bismillah</div> -->
 
-<app-two-way-binding [(value)]="val"></app-two-way-binding>
+<!-- <app-two-way-binding [(value)]="val"></app-two-way-binding> -->
+
+<ng-template #header>Header Here</ng-template>
+<ng-template #footer let-pageNo="page">Footer Here - {{pageNo}}</ng-template>
+
+<app-slot-box [header]="header" [footer]="footer">
+  <p>Content here</p>
+</app-slot-box>
 
 <!-- <div>
   <button fzBtn variant="primary" size="xs" (click-outside)="handleClick()">Test Button</button>
